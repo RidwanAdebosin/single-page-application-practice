@@ -1,79 +1,101 @@
-:root {
-}
+@layer {
+  :root {
+    /* fonts */
+    --decorative: "Montserrat", sans-serif;
+    --sans: "Open Sans", sans-serif;
 
-/*
+    /* font scale */
+    --base-size: 1.2rem;
+    --scale: 1.15;
+    --xl: calc(var(--h1) * var(--scale) * var(--scale)); /* 7.15rem */
+    --lg: calc(var(--h1) * var(--scale)); /* 4.575rem */
+    --h1: calc(var(--h2) * var(--scale)); /* 3.66rem */
+    --h2: calc(var(--h3) * var(--scale)); /* 2.93rem */
+    --h3: calc(var(--h4) * var(--scale)); /* 2.34rem */
+    --h4: calc(var(--h5) * var(--scale)); /* 1.875rem */
+    --h5: calc(var(--h6) * var(--scale)); /* 1.5rem */
+    --h6: var(--base-size); /* 1.2rem */
+    --small: calc(var(--base-size) / var(--scale)); /* 0.96rem */
+
+    /* other variables */
+    --radius: 5px;
+
+    /*
   1. Use a more-intuitive box-sizing model.
 */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
-/*
-  2. Remove default margin
+    /*
+2. Remove default margin and padding
 */
-* {
-  margin: 0;
-}
+    * {
+      margin: 0;
+      padding: 0;
+    }
 
-/*
-  3. Allow percentage-based heights in the application
+    /*
+3. Allow percentage-based heights in the application
 */
-html,
-body {
-  height: 100%;
-}
+    html,
+    body {
+      height: 100%;
+    }
 
-/*
-  Typographic tweaks!
-  4. Add accessible line-height
-  5. Improve text rendering
+    /*
+Typographic tweaks!
+4. Add accessible line-height
+5. Improve text rendering
 */
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
+    body {
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
 
-/*
-  6. Improve media defaults
+    /*
+6. Improve media defaults
 */
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
 
-/*
+    /*
   7. Remove built-in form typography styles
-*/
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
+  */
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
 
-/*
-  8. Avoid text overflows
+    /*
+8. Avoid text overflows
 */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      overflow-wrap: break-word;
+    }
 
-/*
-  9. Create a root stacking context
+    /*
+9. Create a root stacking context
 */
-#root,
-#__next {
-  isolation: isolate;
+    #root,
+    #__next {
+      isolation: isolate;
+    }
+  }
 }
