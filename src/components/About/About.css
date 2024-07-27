@@ -27,7 +27,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-block-end: 60px;
+    margin-block-end: 5rem;
   }
 
   & .circle {
@@ -38,11 +38,12 @@
   }
 }
 
-.company-images-container {
+.section-company-images-container {
   display: grid;
   place-items: center;
   gap: 40px;
   block-size: auto;
+  padding-block-end: 5rem;
   padding-inline: 1rem;
   margin-block-start: -10%;
 
@@ -74,5 +75,136 @@
     block-size: 400px;
     inline-size: 100%;
     border-radius: 10px;
+  }
+}
+
+@media (width >= 600px) {
+  .section-company-images-container {
+    & .second-image {
+      background-position: 70%;
+      block-size: 300px;
+      inline-size: 70%;
+    }
+
+    & .third-image {
+      background-position: 70%;
+      block-size: 300px;
+      inline-size: 70%;
+    }
+  }
+}
+
+@media (width >= 750px) {
+  .section-company-images-container {
+    display: flex;
+    padding-inline: 5rem;
+    inline-size: 100%;
+    margin: 0;
+
+    & .first-image {
+      background-position: 100%;
+      block-size: 250px;
+      inline-size: 40%;
+      margin-top: -200px;
+      border-radius: 5px;
+    }
+
+    & .second-image {
+      background-position: 45%;
+      block-size: 300px;
+      inline-size: 30%;
+      margin-top: -90px;
+      border-radius: 0;
+    }
+
+    & .third-image {
+      background-position: 45%;
+      block-size: 300px;
+      inline-size: 30%;
+      margin-top: -110px;
+      border-radius: 0;
+    }
+  }
+}
+
+@media (width >= 1000px) {
+  .section-company-images-container {
+    padding-inline: 10rem;
+  }
+}
+
+.section-company-why-container {
+  background-color: hsl(216, 33%, 97%);
+  block-size: auto;
+  padding: 3rem 0;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-block-end: 3rem;
+
+  & .section-container-h1 {
+    margin-block-end: 1em;
+  }
+
+  & p {
+    max-width: 800px;
+    text-wrap: balance;
+    font-size: 16px;
+    margin-block-end: 3rem;
+  }
+
+  & .founder-image {
+    margin: auto;
+  }
+}
+
+.section-customer-order {
+  background-color: #2252f7;
+  border-radius: 25px;
+
+  & .customer-order-content {
+    padding: 2rem 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 700px;
+
+    & h1 {
+      font-size: 2.5rem;
+      text-wrap: balance;
+    }
+
+    & button {
+      width: fit-content;
+      padding: 15px 30px;
+      background-color: #664242;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+
+  & .customer-image {
+    background: url(https://static.zohocdn.com/sites/stock-images/images/zpstock-image-1233.webp);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: contain;
+    block-size: 600px;
+    width: 100%;
+  }
+}
+@media (width >= 600px) {
+  .customer-order-content {
+    border: 3px solid red;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  & .customer-image {
+    justify-content: flex-start;
+    margin-right: auto;
   }
 }

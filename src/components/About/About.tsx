@@ -39,10 +39,42 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="company-images-container">
+      <section className="section-company-images-container">
         <div className="first-image"></div>
         <div className="second-image"></div>
         <div className="third-image"></div>
+      </section>
+      <section className="section-company-why-container">
+        <div className="section-container">
+          <h1 className="section-container-h1">Why we exist</h1>
+          <p>
+            Femi our founder, realized that looking your best has a whole lot to
+            do with the condition of your clothes and thinks a lot of people
+            would agree. So he started Pressd Laundry to make it easy for
+            everyone to always have fresh, great-looking clothes.
+          </p>
+          <figure>
+            <img
+              src="https://media.licdn.com/dms/image/D5603AQH8F8dXtT0lYA/profile-displayphoto-shrink_200_200/0/1719415807025?e=1727308800&v=beta&t=zfRNgx73JZx3_3aWVDc8q8DVqGMRbfTdPdrjvKbK7yQ"
+              className="founder-image"
+            />
+            <figcaption>
+              <h1>Eze Nbuka</h1>
+              <small>Founder</small>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section className="section-customer-order">
+        <div className="customer-order-content">
+          <h1>Request a laundry pickup with Pressed today!</h1>
+          <p>
+            Take the first step towards looking your best every time by
+            requesting a laundry pickup from Pressd
+          </p>
+          <button>Request Pickup</button>
+        </div>
+        <div className="customer-image"></div>
       </section>
     </main>
   );
