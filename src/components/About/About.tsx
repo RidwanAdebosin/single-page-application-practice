@@ -1,12 +1,38 @@
 import "./About.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
+const Subscribe = () => {
+  return (
+    <section data-aos="fade-down" className="section-user-subscription">
+      <div className="section-user-container">
+        <h1>Subscribe To Our Newsletter</h1>
+        <p>
+          Stay informed about our latest updates through email.
+          <small> Subscribe here.</small>
+        </p>
+        <form className="form">
+          <label htmlFor="text">
+            <input placeholder="Email" id="text" />
+          </label>
+          <button className="btn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  );
+};
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
     <main>
       <section className="section-about">
         <div className="container">
-          <p>Welcome to My World</p>
-          <h1 className="section-about-h1">
+          <p data-aos="fade-down">Welcome to My World</p>
+          <h1 data-aos="fade-down" className="section-about-h1">
             Discover Why We Are Passionate About Helping People Look Their Best
           </h1>
           <p>
@@ -39,12 +65,12 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="section-company-images-container">
+      <section data-aos="fade-up" className="section-company-images-container">
         <div className="first-image"></div>
         <div className="second-image"></div>
         <div className="third-image"></div>
       </section>
-      <section className="section-company-why-container">
+      <section data-aos="fade-down" className="section-company-why-container">
         <div className="section-container">
           <h1 className="section-container-h1">Why we exist</h1>
           <p>
@@ -67,15 +93,23 @@ const About = () => {
       </section>
       <section className="section-customer-order">
         <div className="customer-order-content">
-          <h1>Request a laundry pickup with Pressed today!</h1>
-          <p>
+          <h1 data-aos="fade-down">
+            Request a laundry pickup with Pressed today!
+          </h1>
+          <p data-aos="fade-down">
             Take the first step towards looking your best every time by
             requesting a laundry pickup from Pressd
           </p>
-          <button>Request Pickup</button>
+          <button data-aos="fade-up">Request Pickup</button>
         </div>
-        <div className="customer-image"></div>
+        <div className="img-wrapper">
+          <img
+            src="https://static.zohocdn.com/sites/stock-images/images/zpstock-image-1233.webp"
+            className="customer-image"
+          />
+        </div>
       </section>
+      <Subscribe />
     </main>
   );
 };

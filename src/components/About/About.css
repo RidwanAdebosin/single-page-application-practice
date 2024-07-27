@@ -141,9 +141,11 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  margin-block-end: 3rem;
+  color: #664242;
 
   & .section-container-h1 {
+    font-size: 40px;
+    font-weight: 600px;
     margin-block-end: 1em;
   }
 
@@ -152,6 +154,7 @@
     text-wrap: balance;
     font-size: 16px;
     margin-block-end: 3rem;
+    letter-spacing: 1px;
   }
 
   & .founder-image {
@@ -162,6 +165,7 @@
 .section-customer-order {
   background-color: #2252f7;
   border-radius: 25px;
+  margin: 70px 0;
 
   & .customer-order-content {
     padding: 2rem 1rem;
@@ -186,25 +190,134 @@
       cursor: pointer;
     }
   }
+  & .img-wrapper {
+    inline-size: 100%;
+  }
 
   & .customer-image {
-    background: url(https://static.zohocdn.com/sites/stock-images/images/zpstock-image-1233.webp);
-    background-repeat: no-repeat;
-    background-position: 100%;
-    background-size: contain;
-    block-size: 600px;
-    width: 100%;
+    block-size: 500px;
+    inline-size: 100%;
   }
 }
 @media (width >= 600px) {
-  .customer-order-content {
-    border: 3px solid red;
-    justify-content: flex-end;
-    margin-left: auto;
-  }
+  .section-customer-order {
+    .customer-order-content {
+      justify-content: flex-end;
+      margin-left: auto;
+      inline-size: 50%;
+    }
 
-  & .customer-image {
-    justify-content: flex-start;
-    margin-right: auto;
+    & .img-wrapper {
+      inline-size: 50%;
+    }
+
+    & .customer-image {
+      block-size: 400px;
+      inline-size: 100%;
+    }
+  }
+}
+
+@media (width >= 750px) {
+  .section-customer-order {
+    display: flex;
+    align-items: center;
+    margin: 70px 40px;
+
+    .customer-order-content {
+      inline-size: 50%;
+    }
+
+    & .img-wrapper {
+      inline-size: 50%;
+    }
+
+    & .customer-image {
+      block-size: 300px;
+      inline-size: 70%;
+    }
+  }
+}
+
+@media (width >= 1000px) {
+  .section-customer-order {
+    .customer-order-content {
+      inline-size: 50%;
+      max-width: 600px;
+    }
+
+    & .img-wrapper {
+      inline-size: 50%;
+    }
+
+    & .customer-image {
+      block-size: 400px;
+      inline-size: 70%;
+    }
+  }
+}
+
+/* STYLING THE SUBSCRIBE COMPONENT */
+.section-user-subscription {
+  inline-size: 100%;
+  padding: 70px 40px;
+  background-color: hsl(216, 33%, 97%);
+
+  & .section-user-container {
+    text-align: center;
+    display: grid;
+
+    gap: 1rem;
+
+    & h1 {
+      color: #664242;
+      font-size: 2.5rem;
+    }
+
+    & .form > * {
+      width: 100%;
+      block-size: 40px;
+
+      & input {
+        inline-size: 100%;
+        block-size: 40px;
+        margin-block-end: 10px;
+        border: none;
+        background-color: white;
+      }
+
+      ::placeholder {
+        font-weight: 400;
+        padding-inline-start: 5px;
+        font-size: 16px;
+      }
+    }
+
+    .btn {
+      background-color: #664242;
+      border: none;
+      cursor: pointer;
+      color: white;
+      font-size: 1.5rem;
+    }
+    .btn:hover {
+      background-color: #553c3c;
+    }
+  }
+}
+
+@media (width >= 750px) {
+  .section-user-container {
+    .form {
+      display: flex;
+      width: 50%;
+      margin: auto;
+      gap: 2px;
+
+      & .btn {
+        width: 40%;
+        font-size: 1em;
+      }
+    }
   }
 }

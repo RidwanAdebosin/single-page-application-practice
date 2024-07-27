@@ -1,9 +1,10 @@
-import About from "./components/About/About";
+import Contact from "./components/About/Contact/Contact";
 
 function App() {
   return (
     <>
-      <About />
+      {/* <About /> */}
+      <Contact />
     </>
   );
 }
