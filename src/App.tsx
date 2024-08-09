@@ -1,10 +1,12 @@
-import Contact from "./components/About/Contact/Contact";
+// import Contact from "./components/About/Contact/Contact";
+import Header from "./components/About/Header/Header";
 
 function App() {
   return (
     <>
       {/* <About /> */}
-      <Contact />
+      {/* <Contact /> */}
+      <Header />
     </>
   );
 }
